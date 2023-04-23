@@ -1,0 +1,26 @@
+<header>
+  <div class="logo">
+    <h1> Weather App</h1>
+  </div>
+  <div class="settings">
+    <!-- <button>Settings</button> -->
+    <div *ngIf="!user">
+      <div id="g_id_onload" data-client_id="364605900961-lld1vmcb0db9f8qnn8kkbkrhebul19me.apps.googleusercontent.com"
+        data-context="signin" data-ux_mode="popup" data-callback="login" data-auto_prompt="false">
+      </div>
+
+      <div class="g_id_signin" data-type="standard" data-shape="rectangular" data-theme="outline"
+        data-text="signin_with" data-size="large" data-logo_alignment="left">
+      </div>
+    </div>
+    
+    <div>
+      <p>{{ user?.name }}</p>
+      <p>{{ user?.email }}</p>
+    </div>
+    <img src="{{ user?.photoUrl }}" referrerpolicy="no-referrer">
+  </div>
+
+</header>
+
+<app-weather></app-weather>
